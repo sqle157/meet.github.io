@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;900&display=swap');
+
+/* Basic setup */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display Medium', sans-serif;
+    font-size: 18px;
+    /* https://stackoverflow.com/questions/14270084/overflow-xhidden-doesnt-prevent-content-from-overflowing-in-mobile-browsers*/
+    overflow-x: hidden;
+    position: relative;
+
+}
+
+h2,
+h4 {
+    font-family: 'Red Hat Display Black', sans-serif;
+}
+
+h2 {
+    font-size: 44px;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 15px;
+    color: #87879D;
+}
+
+/* Style main content */
+
+.logo {
+    background: url(./assets/logo.svg) no-repeat;
+    background-size: cover;
+    max-width: 120px;
+    height: 28px;
+    margin: 80px auto;
+}
+
+/* Intro section */
+
+.introContainer {
+    display: flex;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+#leftHeroPic {
+    background: url(./assets/desktop/image-hero-left.png) no-repeat;
+    background-size: 100%;
+    position: absolute !important;
+    width: 394px;
+    height: 303px;
+    left: -33px;
+}
+
+#rightHeroPic {
+    background: url(./assets/desktop/image-hero-right.png) no-repeat;
+    background-size: 100%;
+    position: absolute !important;
+    width: 394px;
+    height: 303px;
+    right: -33px;
+}
+
+.intro {
+    width: 500px;
+    text-align: center;
+    position: relative;
+    margin: auto auto;
+}
+
+/* Headings | paragraphs | buttons in the intro section */
+.intro h2,
+.intro p,
+.intro button {
+    margin-top: 30px
+}
+
+/* Button */
+
+.downloadBtn {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 1.25rem;
+    background-color: #4D96A9;
+    color: #FAFAFA;
+    margin-right: 15px;
+}
+
+.downloadBtn:last-of-type {
+    background: #855FB1;
+    height: 47px;
+    padding: 1rem 2.5rem;
+    filter: brightness(1);
+}
+
+.whatBtn {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 1.25rem;
+    background-color: #855FB1;
+    color: #FAFAFA;
+}
+
+.whatBtn:hover,
+.downloadBtn:nth-of-type(n):hover {
+    filter: brightness(1.25);
+}
+
+/* Circle Wrapper */
+
+.circleWrapper {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 140px;
+    margin: 90px auto;
+}
+
+.circleWrapper:last-of-type {
+    position: relative;
+    margin-bottom: -30px;
+}
+
+/* Vertical Line */
+.vl {
+    border-left: 1px solid lightgrey;
+    height: 84px;
+    margin: auto auto;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+
+/* Pictures Section */
+.pictureDiv {
+    max-width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.imageFeature {
+    max-width: 40%;
+    height: auto;
+    border-radius: 20px;
+}
+
+
+/* Modern Section */
+.modernDiv {
+    margin: 30px auto;
+    text-align: center;
+    max-width: 540px;
+    height: fit-content;
+}
+
+.modernDiv h4,
+.modernDiv h2,
+.modernDiv p {
+    font-weight: normal;
+    margin: 30px auto;
+}
+
+.modernDiv h4 {
+    color: #4D96A9
+}
+
+.modernDiv p {
+    font-size: 18px;
+}
+
+/* Footer */
+
+.footer {
+    background-image: url(./assets/desktop/image-footer.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: start;
+    position: absolute;
+    width: 100%;
+    height: 303px;
+    z-index: -1;
+}
+
+.footer::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D96A9;
+    opacity: 0.9;
+}
+
+.footer h2,
+.footer h3 {
+    color: white;
+    width: 30%;
+    line-height: 2.25rem;
+    filter: brightness(1);
+}
+
+
+/* Tablet */
+
+@media only screen and (max-width: 1174px) {
+    .intro {
+        margin-top: 300px
+    }
+
+    .pictureDiv {
+        height: fit-content;
+        justify-content: space-evenly;
+    }
+
+    .imageFeature {
+        width: 22%;
+        height: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: 428px;
+        text-align: center;
+        padding: 40px;
+        background-image: url(./assets/tablet/image-footer.jpg);
+    }
+
+    .footer h2,
+    .footer h3 {
+        width: fit-content;
+    }
+
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 425px) {
+
+    #leftHeroPic {
+        left: -18px
+    }
+
+    #rightHeroPic {
+        right: -18px;
+    }
+
+    #rightHeroPic,
+    #leftHeroPic {
+        max-height: 200px;
+        width: 200px;
+    }
+
+    .intro {
+        margin-top: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+
+    .downloadBtn {
+        padding: 1rem 2.5rem;
+        margin-right: 0;
+        margin-bottom: -8px;
+    }
+
+    .whatBtn {
+        padding: 1rem 1.75rem
+    }
+
+    .pictureDiv {
+        flex-wrap: wrap;
+    }
+
+    .imageFeature {
+        width: 100%;
+        margin: 0 0 20px 0;
+        border-radius: 10px;
+    }
+
+    .modernDiv {
+        padding: 20px;
+    }
+
+    .modernDiv h2 {
+        font-size: 36px;
+    }
+
+    .modernDiv p {
+        font-size: 16px;
+    }
+
+    .footer {
+        background-image: url(./assets/mobile/image-footer.jpg);
+    }
+
+    .footer h2 {
+        font-size: 36px;
+    }
+
+    .footer h3 {
+        font-size: 16px;
+    }
+
+}
