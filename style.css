@@ -41,7 +41,7 @@ p {
 /* Style main content */
 
 .logo {
-    background: url(./assets/logo.svg) no-repeat;
+    background: url(./starter-code/assets/logo.svg) no-repeat;
     background-size: cover;
     max-width: 120px;
     height: 28px;
@@ -57,7 +57,7 @@ p {
 }
 
 #leftHeroPic {
-    background: url(./assets/desktop/image-hero-left.png) no-repeat;
+    background: url(./starter-code/assets/desktop/image-hero-left.png) no-repeat;
     background-size: 100%;
     position: absolute !important;
     width: 394px;
@@ -66,7 +66,7 @@ p {
 }
 
 #rightHeroPic {
-    background: url(./assets/desktop/image-hero-right.png) no-repeat;
+    background: url(./starter-code/assets/desktop/image-hero-right.png) no-repeat;
     background-size: 100%;
     position: absolute !important;
     width: 394px;
@@ -193,7 +193,7 @@ p {
 /* Footer */
 
 .footer {
-    background-image: url(./assets/desktop/image-footer.jpg);
+    background-image: url(./starter-code/assets/desktop/image-footer.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -248,7 +248,7 @@ p {
         height: 428px;
         text-align: center;
         padding: 40px;
-        background-image: url(./assets/tablet/image-footer.jpg);
+        background-image: url(./starter-code/assets/tablet/image-footer.jpg);
     }
 
     .footer h2,
@@ -319,7 +319,7 @@ p {
     }
 
     .footer {
-        background-image: url(./assets/mobile/image-footer.jpg);
+        background-image: url(./starter-code/assets/mobile/image-footer.jpg);
     }
 
     .footer h2 {
